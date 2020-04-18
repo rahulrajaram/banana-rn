@@ -6,6 +6,7 @@ import AccountSuspendedScreen from '../AccountSuspendedScreen';
 import ApplicationPendingScreen from '../ApplicationPendingScreen';
 import ApplicationApprovedScreen from '../ApplicationApprovedScreen';
 import ApplicationIncompleteScreen from '../ApplicationIncompleteScreen';
+import DonorDashboardScreen from '../DonorDashboardScreen';
 import DashboardScreen from '../DashboardScreen';
 
 export default () => {

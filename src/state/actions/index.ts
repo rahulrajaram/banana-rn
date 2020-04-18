@@ -11,6 +11,7 @@ export interface Actions {
 	scan: () => Promise<StatusCode>;
 }
 export { getActiveDonationsForClient } from './getActiveDonationsForClient';
+export { getDonations } from './getDonations';
 export { getDonationsOrClaims } from './getDonationsOrClaims';
 export { getLocation } from './getLocation';
 export { logIn, logOut } from './auth';
