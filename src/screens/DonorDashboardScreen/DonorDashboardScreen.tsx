@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import useGlobal from '@state';
 import { Title, SpacerInline, Header } from '@elements';
-import Donations from '../../elements/Donations/Donations';
+import Donations from '../../library/Donations/Donations';
 import styles from './DonorDashboardScreen.styles';
 
 function getBackButtonViewComponent() {

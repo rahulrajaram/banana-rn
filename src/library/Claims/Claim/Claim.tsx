@@ -6,35 +6,35 @@ import {
 	TouchableOpacity,
 	Image,
 } from 'react-native';
-import { ClaimType } from './Claim.type';
+// import { ClaimType } from './Claim.type';
 import styles from '../../DonationOrClaim/DonationOrClaim.styles';
 
-export default claim => {
+export default donation => {
 	const { navigate } = useNavigation();
 	const {
-		address,
-		canceled,
-		client_id,
-		completed,
+		claims,
 		created_at,
-		donation,
-		donor,
+		duration_minutes,
+		food_name,
+		image_url,
+		measurement,
+		per_person,
+		pickup_location,
+		total_servings,
 		id,
-		qr_code,
-	} = claim;
+	} = donation;
 
 	const icon = require('@assets/images/banana-icon.png');
 
 	const startTime = new Date(created_at);
 	const now = new Date();
 	const minutesElapsed = Math.round((now.getTime() - startTime.getTime()) / 1000 / 60);
-	// const timeLeft = minutesElapsed < duration_minutes
-	// 	? duration_minutes - minutesElapsed
-	// 	: 0;
-	const timeLeft = 100;
+	const timeLeft = minutesElapsed < duration_minutes
+		? duration_minutes - minutesElapsed
+		: 0;
 	return (
 		<TouchableOpacity
-			onPress={() => navigate('ClaimDetailScreen', { claim, id })}
+			onPress={() => navigate('ClaimDetailScreen', { donation, id })}
 		>
 			<View style={styles.card}>
 				<View style={[ styles.iconContainer, { backgroundColor: timeLeft > 0 ? 'blue' : 'gray' } ]}>

@@ -58,7 +58,6 @@ export default ({ resource }: LocalProps) => {
 
 	useEffect(() => {
 		if (isFocused) {
-			window.alert("YOLO");
 			getClaimsFromApi();
 		}
 	}, [ isFocused ]);

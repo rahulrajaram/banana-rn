@@ -1,3 +1,3 @@
-import ClaimScreen from './ClaimScreen';
+import ClientDashboardScreen from './ClientDashboardScreen';
 
-export default ClaimScreen;
+export default ClientDashboardScreen;

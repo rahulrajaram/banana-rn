@@ -29,16 +29,16 @@ export default () => {
 	const donationId = useNavigationParam('id') || null;
 
 	const {
-		claims = '',
-		created_at = new Date(),
-		duration_minutes = 60,
-		food_name = '',
-		image_url = '',
-		measurement = '',
-		per_person = '',
-		pickup_location = state.user.pickup_location || '',
-		total_servings = '',
-	} = donation || {};
+		claims,
+		created_at,
+		duration_minutes,
+		food_name,
+		image_url,
+		measurement,
+		per_person,
+		pickup_location = state.user.pickup_location,
+		total_servings,
+	} = donation;
 
 	const [ name, setName ] = useState(food_name);
 	const [ durationInMinutes, setDurationInMinutes ] = useState(60);

@@ -5,10 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import useGlobal from '@state';
 import { Title, SpacerInline, Header } from '@elements';
 import Donations from '../../library/Donations/Donations';
-import styles from './ClaimScreen.styles';
+import styles from './ClientDashboardScreen.styles';
 
 function getBackButtonViewComponent() {
-	const title = 'Open Donations.';
+	const title = 'Open donations';
 
 	return <View>
 		<Header showBackButton={false} />
@@ -21,15 +21,13 @@ function getDonationScreenNavigationButton() {
 	const { navigate } = useNavigation();
 
 	<View style={styles.addButton}>
-		<TouchableOpacity onPress={() => {
-			return navigate('ClientDonationScreen', {})
-		}}>
+		<TouchableOpacity onPress={() => navigate('ClientDonationScreen', {})}>
 			<Text style={styles.plus}/>
 		</TouchableOpacity>
 	</View>
 }
 
-const ClientDashboardScreen = () => {
+const DonorDashboardScreen = () => {
 	const [ state ] = useGlobal();
 
 	return (
@@ -41,4 +39,4 @@ const ClientDashboardScreen = () => {
 	);
 };
 
-export default ClientDashboardScreen;
+export default DonorDashboardScreen;
